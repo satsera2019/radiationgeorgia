@@ -81,8 +81,8 @@
 
         var vectorSource = new ol.source.Vector({});
         var places = [
-            [44.76488828241705, 41.72839858048209, 'http://maps.google.com/mapfiles/ms/micons/blue.png'],
-            [44.7894181004358, 41.706101338417945, 'http://maps.google.com/mapfiles/ms/micons/blue.png'],
+            [44.76488828241705, 41.72839858048209, 'http://maps.google.com/mapfiles/ms/micons/blue.png', 'red'],
+            [44.7894181004358, 41.706101338417945, 'http://maps.google.com/mapfiles/ms/micons/blue.png', 'green'],
         ];
 
         var features = [];
@@ -91,13 +91,11 @@
                 geometry: new ol.geom.Point(ol.proj.transform([places[i][0], places[i][1]], 'EPSG:4326',
                     'EPSG:3857')),
             });
-
             var iconStyle = new ol.style.Style({
                 image: new ol.style.Icon({
                     src: places[i][2],
-                    // color: places[i][3],
                     crossOrigin: 'anonymous',
-                    color: 'green'
+                    color: places[i][3],
                 })
             });
             iconFeature.setStyle(iconStyle);
