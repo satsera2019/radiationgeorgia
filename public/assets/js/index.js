@@ -81,9 +81,19 @@ const map = new ol.Map({
         zoom: defaultZoom,
         minZoom: minZoomView,
         maxZoom: maxZoomView,
-        // extent: [41.572907, 41.934041, 44.258401, 44.267328],
     }),
 });
+
+/**
+ * extent map ( map x,y limits )
+ */
+map.setView(
+    new ol.View({
+        center: ol.proj.fromLonLat([lng, lat]),
+        extent: map.getView().calculateExtent(map.getSize()),
+        zoom: 12
+    })
+);
 
 /**
  * prepeare markers array
