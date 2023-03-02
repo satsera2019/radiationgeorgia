@@ -122,7 +122,8 @@ const markers = new ol.layer.Vector({
     style: new ol.style.Style({
         image: new ol.style.Icon({
             anchor: [0.5, 1],
-            src: 'https://ucarecdn.com/4b516de9-d43d-4b75-9f0f-ab0916bd85eb/marker.png',
+            src: '../assets/img/marker.png',
+            // size: [10, 10],
         }),
         cursor: 'pointer',
     }),
