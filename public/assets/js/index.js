@@ -64,8 +64,6 @@ const map = new ol.Map({
 
             // satellite view
             source: new ol.source.XYZ({
-                attributions: ['Powered by Esri',
-                    'Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'],
                 attributionsCollapsible: false,
                 url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
                 zoom: defaultZoom,
@@ -91,7 +89,7 @@ map.setView(
     new ol.View({
         center: ol.proj.fromLonLat([lng, lat]),
         extent: map.getView().calculateExtent(map.getSize()),
-        zoom: 12
+        zoom: defaultZoom
     })
 );
 

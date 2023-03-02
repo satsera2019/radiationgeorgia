@@ -57,3 +57,14 @@ body,
 .ol-popup-closer:after {
     content: "✖";
 }
+
+.ol-zoom{
+    top: 0.5em;
+    left: 48.5em;
+    left: 50%;
+    display: flex;
+}
+
+.ol-zoom-in, .ol-zoom-out{
+    cursor: pointer !important;
+}
