@@ -26,18 +26,18 @@ const tbilisi = ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857');
  */
 const Models = [
     {
-        category: 'Radiation',
-        title: 'Tbilisi',
-        long: 44.76488828241705,
-        lat: 41.72839858048209,
-        description: 'radiation 1',
+        city: 'Tbilisi',
+        street: 'Javakheti I Turn',
+        radiation: '3',
+        long: 44.8700212802142,
+        lat: 41.694259083403544,
     },
     {
-        category: 'Capital city',
-        title: 'Tbilisi',
-        long: 44.7894181004358,
-        lat: 41.706101338417945,
-        description: 'radiation 2',
+        city: 'Tbilisi',
+        street: 'Varketili-3 I Micro-District',
+        radiation: '2',
+        long: 44.872720,
+        lat: 41.699500, 
     },
 ];
 
@@ -103,9 +103,9 @@ for (key in Models) {
         geometry: new ol.geom.Point(
             ol.proj.fromLonLat([parseFloat(_Data.long), parseFloat(_Data.lat)])
         ),
-        category: _Data.category,
-        title: _Data.title,
-        description: _Data.description,
+        city: _Data.city,
+        street: _Data.street,
+        radiation: _Data.radiation,
     });
     features.push(feature);
 }
@@ -142,9 +142,9 @@ map.on('click', function (evt) {
     if (feature) {
         const coordinates = feature.getGeometry().getCoordinates();
         popup_content.innerHTML =
-            '<p>Category:</p><code>' + feature.get('category') + '</code><br>' +
-            '<p>Title:</p><code>' + feature.get('title') + '</code><br>' +
-            '<p>Description:</p><code>' + feature.get('description') + '</code>'
+            '<div class="row"><p class="col">City:</p><code class="col">' + feature.get('city') + '</code><div>' +
+            '<div class="row"><p class="col">Street:</p><code class="col">' + feature.get('street') + '</code><div>' +
+            '<div class="row"><p class="col">Radiation:</p><code class="col">' + feature.get('radiation') + '</code><div>'
         overlay.setPosition(coordinates);
     }
 });
