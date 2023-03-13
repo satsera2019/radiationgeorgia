@@ -25,192 +25,175 @@ const tbilisi = ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857');
  * set array of markers location data
  */
 const Models = [
-    
+
     {
         city: 'Tbilisi',
         street: 'Varketili-3 I Micro-District',
         radiation: '2',
         long: 44.872720,
-        lat: 41.699500, 
+        lat: 41.699500,
     },
     {
         city: 'Tbilisi',
         street: '1 Ilia Chavchavadze Ave',
         radiation: '90.6',
         long: 44.77800845482623,
-        lat: 41.71007928815785, 
+        lat: 41.71007928815785,
     },
     {
         city: 'Tbilisi',
         street: 'Mziuri Park',
         radiation: '189.6',
         long: 44.7712165977353,
-        lat: 41.71166444689598, 
-        
+        lat: 41.71166444689598,
+
     },
     {
         city: 'Tbilisi',
         street: 'Mrgvali Baghi',
         radiation: '80',
         long: 44.774939536213815,
-        lat: 41.70735563539224, 
+        lat: 41.70735563539224,
     },
-    
     {
         city: 'Tbilisi',
         street: 'University Street',
         radiation: '65',
         long: 44.718061,
-        lat: 41.717475, 
+        lat: 41.717475,
     },
     {
         city: 'Tbilisi',
         street: 'Petre Kavtaradze St 32',
         radiation: '132',
         long: 44.718959210449064,
-        lat: 41.71984268573625, 
+        lat: 41.71984268573625,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Sandro Euli Street',
         radiation: '60.6',
         long: 44.71689321866395,
-        lat: 44.71689321866395, 
+        lat: 44.71689321866395,
     },
-    
     {
         city: 'Tbilisi',
         street: '34 Shalva Nutsubidze Street',
         radiation: '33.75',
         long: 44.72151619251394,
-        lat: 41.72590096147128, 
+        lat: 41.72590096147128,
     },
-    
     {
         city: 'Tbilisi',
         street: '34 Vazha Pshavela Ave',
         radiation: '25',
         long: 44.74989292084527,
-        lat: 41.72601327149425, 
+        lat: 41.72601327149425,
     },
-    
     {
         city: 'Tbilisi',
         street: '8 Aleksandre Kazbegi Ave',
         radiation: '45',
         long: 44.76510436623354,
-        lat: 41.72606604836169, 
+        lat: 41.72606604836169,
     },
     {
         city: 'Tbilisi',
         street: 'Mushthaid Garden',
         radiation: '75',
         long: 44.78651051616429,
-        lat: 41.721181154364764, 
+        lat: 41.721181154364764,
     },
-    
     {
         city: 'Tbilisi',
         street: '52 Tsereteli Ave',
         radiation: '135',
         long: 44.78618927859276,
-        lat: 41.73038599629105, 
+        lat: 41.73038599629105,
     },
-   
     {
         city: 'Tbilisi',
         street: 'Samtredia St 2',
         radiation: '60.6',
         long: 44.77438907841825,
-        lat: 41.74295409621279, 
+        lat: 41.74295409621279,
     },
-   
     {
         city: 'Tbilisi',
         street: '32 Dighomi Massive III Quarter',
         radiation: '28.8',
         long: 44.77608229490563,
-        lat: 41.75684381102219, 
+        lat: 41.75684381102219,
     },
-    
     {
         city: 'Tbilisi',
         street: '8 Dighomi Massive IV Quarter',
         radiation: '35',
         long: 44.772955645675026,
-        lat: 41.762404944154206, 
+        lat: 41.762404944154206,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Mose Gogiberidze St',
         radiation: '14.7',
         long: 44.774482690107156,
-        lat: 41.765480312476036, 
+        lat: 41.765480312476036,
     },
     {
         city: 'Tbilisi',
         street: '1 Omar Khizanishvili St',
         radiation: '120.7',
         long: 44.81869912110035,
-        lat: 41.79317601769007, 
+        lat: 41.79317601769007,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Tsageri St',
         radiation: '67.5',
         long: 44.82478206209968,
-        lat: 41.79622405179718, 
+        lat: 41.79622405179718,
     },
-   
     {
         city: 'Tbilisi',
         street: 'Gldani V Micro-District',
         radiation: '52',
         long: 44.83048175289412,
-        lat: 41.79955376619718, 
+        lat: 41.79955376619718,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Omar Khizanishvili St',
         radiation: '30',
         long: 44.8322150367668,
-        lat: 41.80399660960234, 
+        lat: 41.80399660960234,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Gldani VI Micro-District',
         radiation: '82',
         long: 44.82583065276319,
-        lat: 41.80440899189453, 
+        lat: 41.80440899189453,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Gldani IV Micro-District',
         radiation: '12',
         long: 44.81974018553376,
-        lat: 41.79937330782889, 
+        lat: 41.79937330782889,
     },
-    
     {
         city: 'Tbilisi',
         street: 'Viktor Kupradze St',
         radiation: '5',
         long: 44.872754758023746,
-        lat: 41.69979954798147, 
+        lat: 41.69979954798147,
     },
-    
     {
         city: 'Tbilisi',
         street: '66 Javakheti St',
         radiation: '2',
         long: 44.869073528009224,
-        lat: 41.69685223221426, 
+        lat: 41.69685223221426,
     },
     {
         city: 'Tbilisi',
@@ -219,32 +202,27 @@ const Models = [
         long: 44.8700212802142,
         lat: 41.694259083403544,
     },
-    
     {
         city: 'Tbilisi',
         street: '20 Tskneti Hwy',
         radiation: '42.2',
         long: 44.731096843465366,
-        lat: 41.71004585910329, 
+        lat: 41.71004585910329,
     },
-    
     {
         city: 'Tbilisi',
         street: '41 Tskneti Hwy',
         radiation: '11',
         long: 44.72789223619341,
-        lat: 41.71074304776282, 
+        lat: 41.71074304776282,
     },
-    
     {
         city: 'Tbilisi',
         street: '17 Tskneti Hwy',
         radiation: '39.8',
         long: 44.73427181146992,
-        lat: 41.709350621302626, 
+        lat: 41.709350621302626,
     },
-    
-    
 ];
 
 /**
@@ -374,4 +352,3 @@ popup_closer.onclick = function () {
     popup_closer.blur();
     return false;
 };
-
