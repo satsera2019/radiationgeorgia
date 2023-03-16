@@ -328,7 +328,7 @@ map.on('click', function (evt) {
         popup_content.innerHTML =
             '<div class="row"><p class="col">City:</p><code class="col">' + feature.get('city') + '</code><div>' +
             '<div class="row"><p class="col">Street:</p><code class="col">' + feature.get('street') + '</code><div>' +
-            '<div class="row"><p class="col">Radiation:</p><code class="col">' + feature.get('radiation') + 'µSv</code><div>'
+            '<div class="row"><p class="col">Radiation:</p><code class="col">' + feature.get('radiation') + ' µSv</code><div>'
         overlay.setPosition(coordinates);
     }
 });
